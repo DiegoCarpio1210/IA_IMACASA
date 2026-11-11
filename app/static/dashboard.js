@@ -9,13 +9,13 @@
   el('roleLabel').textContent=data.role_name;
   el('dashboardNav').hidden=!permissions.some(p=>['stats_own','stats_pc08'].includes(p));
   el('adminNav').hidden=!permissions.some(p=>['users','roles','audit','settings'].includes(p));
-  el('simulate').hidden=el('auto').hidden=!permissions.includes('simulate');el('export').hidden=!permissions.includes('export');
+  el('simulate').hidden=el('auto').hidden=!permissions.includes('simulate');el('export').hidden=!permissions.includes('export');el('generationNote').hidden=permissions.includes('simulate');
   const manager=permissions.includes('stats_pc08');document.querySelectorAll('.manager-only').forEach(e=>e.hidden=!manager);
   el('dashboardTitle').textContent=manager?'Panorama de Enderezado PC08':'Mi jornada en Enderezado PC08';
   el('statsDefect').replaceChildren(option('','Todos'),...['Sin defecto',...data.defects.PC08].map(v=>option(v)));
   for(const id of ['statsOwner','filterOwner'])el(id).replaceChildren(option('','Todos'));
   for(const id of ['statsOwnerLabel','statsRoleLabel','historyOwnerLabel','historyRoleLabel'])el(id).hidden=!permissions.includes('read_pc08');
-  if(permissions.includes('read_pc08'))request('/ui/operators').then(rows=>{for(const id of ['statsOwner','filterOwner'])for(const row of rows)el(id).append(option(String(row.id),row.display_name));}).catch(e=>message(e.message));
+  if(permissions.includes('read_pc08'))request('/ui/operators').then(rows=>{for(const id of ['statsOwner','filterOwner'])for(const row of rows)el(id).append(option(String(row.id),row.display_name));}).catch(e=>reportError(e));
   // Reset filters and prior role's page when another user signs in.
   for(const id of ['filterOwner','filterRole','filterReview','filterDate','filterFrom','filterTo','statsOwner','statsRole','statsReview','statsFrom','statsTo'])el(id).value='';
   changePage('live');
@@ -39,7 +39,7 @@
   chart('lineChart','line',days,[{label:'Inspecciones',data:data.daily.map(r=>r.total),borderColor:'#176a36',backgroundColor:'#176a36'},{label:'Con defecto',data:data.daily.map(r=>r.defects),borderColor:'#a32b38',backgroundColor:'#a32b38'}]);
   if(permissions.includes('stats_pc08')){chart('pieChart','pie',names,[{data:counts,backgroundColor:colors}]);chart('periodChart','bar',days,[{label:'OK',data:data.daily.map(r=>r.total-r.defects),backgroundColor:'#176a36'},{label:'Defecto',data:data.daily.map(r=>r.defects),backgroundColor:'#a32b38'}]);}
  };
- function button(text,fn){const b=document.createElement('button');b.type='button';b.className='secondary';b.textContent=text;b.onclick=async()=>{try{await fn();message('Cambio guardado');await window.loadAdmin();}catch(e){message(e.message);}};return b;}
+ function button(text,fn){const b=document.createElement('button');b.type='button';b.className='secondary';b.textContent=text;b.onclick=async()=>{try{await fn();message('Cambio guardado');await window.loadAdmin();}catch(e){reportError(e);}};return b;}
  function selectRoles(current){const s=document.createElement('select');for(const r of roleData)s.append(option(r.id,r.name));s.value=current;return s;}
  function showRole(){const r=roleData.find(x=>x.id===el('editRole').value);if(!r)return;el('editRoleName').value=r.name;for(const input of el('permissionChecks').querySelectorAll('input'))input.checked=r.permissions.includes(input.value);}
  window.loadAdmin=async()=>{
@@ -51,11 +51,11 @@
   if(permissions.includes('audit'))rows('auditRows',(await request('/ui/admin/audit')).map(r=>[timeLabel(r.stamp,true),r.username||'Inicialización local',r.action,r.target||'—']));
  };
  document.addEventListener('DOMContentLoaded',()=>{
-  el('statsRefresh').onclick=()=>window.loadDashboard().catch(e=>message(e.message));
+  el('statsRefresh').onclick=()=>window.loadDashboard().catch(e=>reportError(e));
   el('showPending').onclick=()=>{el('filterStation').value='PC08';populateDefects();el('filterReview').value='pending';changePage('history');};
   el('editRole').onchange=showRole;
-  el('createUserForm').onsubmit=async e=>{e.preventDefault();try{await request('/ui/admin/users',{method:'POST',body:JSON.stringify({username:el('newUsername').value,display_name:el('newDisplayName').value,password:el('newPassword').value,role:el('newRole').value})});el('createUserForm').reset();await window.loadAdmin();message('Cuenta creada');}catch(err){message(err.message);}};
-  el('roleForm').onsubmit=async e=>{e.preventDefault();try{await request('/ui/admin/roles/'+el('editRole').value,{method:'POST',body:JSON.stringify({name:el('editRoleName').value,permissions:[...el('permissionChecks').querySelectorAll('input:checked')].map(x=>x.value)})});await window.loadAdmin();message('Permisos guardados');}catch(err){message(err.message);}};
-  el('saveSettings').onclick=async()=>{try{await request('/ui/admin/settings',{method:'POST',body:JSON.stringify({demo_enabled:el('demoEnabled').checked})});message('Configuración guardada');}catch(e){message(e.message);}};
+  el('createUserForm').onsubmit=async e=>{e.preventDefault();try{await request('/ui/admin/users',{method:'POST',body:JSON.stringify({username:el('newUsername').value,display_name:el('newDisplayName').value,password:el('newPassword').value,role:el('newRole').value})});el('createUserForm').reset();await window.loadAdmin();message('Cuenta creada');}catch(err){reportError(err);}};
+  el('roleForm').onsubmit=async e=>{e.preventDefault();try{await request('/ui/admin/roles/'+el('editRole').value,{method:'POST',body:JSON.stringify({name:el('editRoleName').value,permissions:[...el('permissionChecks').querySelectorAll('input:checked')].map(x=>x.value)})});await window.loadAdmin();message('Permisos guardados');}catch(err){reportError(err);}};
+  el('saveSettings').onclick=async()=>{try{await request('/ui/admin/settings',{method:'POST',body:JSON.stringify({demo_enabled:el('demoEnabled').checked})});message('Configuración guardada');}catch(e){reportError(e);}};
  });
 })();

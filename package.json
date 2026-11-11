@@ -1,1 +1,15 @@
-{"name":"pimientero-pc08-browser-tests","version":"2.0.0","private":true,"description":"Browser regression tests only; the UI needs no Node server","devDependencies":{"playwright":"1.62.1"},"scripts":{"test:images":"node --test tests/test_images.cjs","test:dashboard":"node tests/test_dashboard.cjs","test:viewer":"node tests/test_viewer.cjs"}}
+{
+  "name": "pimientero-pc08-browser-tests",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Browser regression tests only; the UI needs no Node server",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "scripts": {
+    "test:images": "node --test tests/test_images.cjs",
+    "test:dashboard": "node tests/test_dashboard.cjs",
+    "test:viewer": "node tests/test_viewer.cjs",
+    "test:session": "node tests/test_session_message.cjs"
+  }
+}
