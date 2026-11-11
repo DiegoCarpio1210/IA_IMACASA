@@ -23,7 +23,23 @@ work/
 node_modules/
 browser-accounts.json
 
-# Capturas e informe binario: solo locales por decisión del usuario
+# Excluir material no revisado; excepciones autorizadas explícitas
 docs/evidencias/*.png
 docs/informe/*.pdf
 docs/informe/*.docx
+
+# Paquete revisado autorizado en la instrucción final
+!docs/evidencias/administracion.png
+!docs/evidencias/docker-filtro-legado.png
+!docs/evidencias/docker-ui-pc08.png
+!docs/evidencias/herrero-dashboard.png
+!docs/evidencias/herrero-historial.png
+!docs/evidencias/inspeccion-antes.png
+!docs/evidencias/inspeccion-despues.png
+!docs/evidencias/operativo-movil.png
+!docs/evidencias/pulidor-dashboard.png
+!docs/evidencias/pulidor-historial.png
+!docs/evidencias/supervisor-dashboard.png
+!docs/evidencias/supervisor-historial.png
+!docs/informe/CP1_PC08_preliminar_sin_credenciales.docx
+!docs/informe/CP1_PC08_preliminar_sin_credenciales.pdf

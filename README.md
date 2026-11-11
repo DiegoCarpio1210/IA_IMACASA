@@ -96,3 +96,9 @@ $env:DB_PATH = Join-Path $PWD 'datos-locales/events.sqlite3'
 No subir `.env`, bases operativas, WAL/SHM, sesiones, respaldos ni fotografías internas. [Migración, respaldo y rotación](docs/SEGURIDAD.md). Las claves no se incluyen en el informe sanitizado. HTTP local sirve para el equipo propio; acceso externo debe usar HTTPS. SQLite y la limitación de intentos en memoria son decisiones para un demo de una instancia, no certificación industrial ni plataforma de producción.
 
 La paleta naranja/blanco/verde deriva del sitio público de IMACASA y ajustes de contraste, sin atribuir un manual oficial ni aprobación empresarial; [fuentes y códigos](docs/IDENTIDAD.md). Pendientes industriales: definiciones, tolerancias, captura autorizada, responsabilidades y criterios de aceptación. No se entrenaron modelos ni se modificaron esos supuestos.
+
+## Entrega y trabajo del equipo
+
+[Corrección de sesión](docs/CORRECCION_SESION.md) · [Colaboración de cuatro integrantes](docs/COLABORACION.md) · [API](docs/API.md) · [Despliegue](docs/DESPLIEGUE.md) · [Modelos propuestos](docs/IA_MODELOS.md) · [Matriz oficial de 100 puntos](docs/MATRIZ_RUBRICA.md) · [Revisión de material publicable](docs/REVISION_PUBLICACION.md).
+
+El paquete incorpora las 12 capturas sintéticas y los DOCX/PDF sanitizados autorizados tras revisión. El informe permanece preliminar; los originales privados no se modificaron. No contiene credenciales de presentación.

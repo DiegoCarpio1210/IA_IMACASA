@@ -37,3 +37,9 @@ Confirmar nombres de puestos, ámbitos de acceso, autoridad del supervisor y rev
 ## Publicación
 
 Repositorio destino privado: `DiegoCarpio1210/IA_IMACASA`. Se prepara rama de desarrollo y PR, sin integrar automáticamente a main. Se excluyen secretos, base operativa, respaldos e imágenes internas. El commit y PR final se informan en la entrega. El repositorio estaba vacío al comenzar; no se borró historia remota.
+
+## Corrección final y paquete autorizado
+
+La instrucción final amplió la autorización para incluir las 12 capturas y el DOCX/PDF sanitizados después de revisar su contenido. REVISION_PUBLICACION.md registra archivos y hashes; MATRIZ_RUBRICA.md contrasta el PDF oficial. COLABORACION.md distribuye cuatro funciones y explica clonado, ramas y PR sin fusiones automáticas. API.md y DESPLIEGUE.md documentan contratos y ejecución; IA_MODELOS.md conserva la propuesta bibliográfica y sus límites.
+
+El arreglo de la franja no cambia permisos: limpia estado de errores entre sesiones, separa 401/403 y descarta solicitudes de sesiones anteriores. Los originales privados y la propuesta industrial permanecen intactos. Ver CORRECCION_SESION.md y PRUEBAS.md para resultados actuales; las secciones anteriores describen la actualización previa.

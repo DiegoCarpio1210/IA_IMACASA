@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<rect width="1200" height="620" fill="white"/><style>text{font-family:Arial;fill:#19332e;font-size:18px}.frame{stroke:#56776c;stroke-width:5;fill:none}.light{fill:#fff1be;stroke:#ad9657;stroke-width:2}.part{fill:#9eb4b6;stroke:#45636a;stroke-width:2}</style>
+<text x="35" y="40" font-size="25">Boceto del soporte de captura propuesto</text><text x="35" y="70">Conceptual, sin escala ni dimensiones · Representa la propuesta existente, pendiente de validación</text>
+<text x="40" y="115">A · Superficie con pieza detenida</text><path class="frame" d="M65 420V155H540V420M45 420H565"/>
+<rect x="265" y="170" width="80" height="40" rx="4" fill="#19332e"/><path d="M290 210V230H320V210" fill="#56776c"/><text x="365" y="195">Cámara cenital</text><text x="365" y="220">Lente C por definir</text>
+<rect class="light" x="185" y="255" width="240" height="20"/><text x="215" y="300">Difusor superior</text>
+<path class="part" d="M160 369L440 355L470 370L440 382H160Z"/><rect x="180" y="388" width="25" height="25" fill="#7e938b"/><rect x="420" y="388" width="25" height="25" fill="#7e938b"/>
+<rect class="light" x="85" y="330" width="50" height="18" transform="rotate(20 85 330)"/><rect class="light" x="480" y="345" width="50" height="18" transform="rotate(-20 480 345)"/>
+<text x="80" y="455">Barras rasantes opuestas y conmutables</text><text x="80" y="482">Topes y apoyos sin deformar la hoja</text>
+<text x="650" y="115">B · Perfiles mediante reposicionamiento</text><path class="frame" d="M670 420V155H1145V420M650 420H1165"/>
+<rect class="light" x="755" y="230" width="310" height="150"/><text x="800" y="265">Panel de contraluz</text><path d="M800 335H1020" stroke="#19332e" stroke-width="6"/><text x="805" y="365">Perfil de la pieza</text>
+<rect x="685" y="300" width="55" height="42" fill="#19332e"/><path d="M740 311H753V333H740" fill="#56776c"/>
+<text x="665" y="455">Reposicionar cámara o pieza con guía</text><text x="665" y="482">No son dos cámaras ya adquiridas</text>
+<text x="35" y="540">Marco rígido y control de luz ambiente. Segunda cara: volteo guiado; macro: otra configuración óptica.</text><text x="35" y="575">Pendiente: distancia, focal, campo, tolerancias, seguridad y tiempo de ciclo. No es un plano de fabricación.</text></svg>

@@ -1,7 +1,7 @@
-# Informe preliminar en texto sin credenciales
+# Informe preliminar completo y sanitizado
 
-Por decisión del usuario, GitHub contiene únicamente código y documentación de texto. `CP1_PC08_preliminar_sin_credenciales.txt` es una extracción por páginas de la copia sanitizada del informe anterior; no constituye una nueva versión definitiva ni incorpora cambios industriales.
+Se publican las copias DOCX y PDF completas autorizadas, además de la extracción TXT. Los 14 archivos antes excluidos (12 capturas y estos dos informes) fueron revisados antes de incorporarlos. No se sustituyó el original por un resumen ni se cambiaron datos industriales.
 
-El DOCX/PDF sanitizado y las capturas quedan locales. El original privado permanece intacto y fuera del repositorio. La copia local tiene 10 páginas, 9 de cuerpo y 1 de referencias. La URL histórica es temporal y no garantiza funcionamiento actual.
+El PDF tiene 10 páginas: 9 de cuerpo y 1 de referencias. Contiene una captura anterior y resultados históricos; consultar CORRECCION_SESION.md y PRUEBAS.md para el estado actual. No es una versión definitiva posterior a la visita. La URL histórica es temporal y las credenciales se retiraron de la portada. Los originales locales privados permanecen intactos y fuera de GitHub.
 
-Las cifras de pruebas y la interfaz descritas en el informe son históricas. Leer junto con `../CAMBIOS.md` y `../PRUEBAS.md`. Integrar la visita y las evidencias antes de emitir el definitivo.
+Preparar después la copia privada de evaluación con URL activa y credencial temporal, según la rúbrica; no subir esa copia a GitHub.

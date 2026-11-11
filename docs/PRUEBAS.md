@@ -65,3 +65,17 @@ Ver `evidencias/README.md`. La captura móvil del dashboard verifica tamaño de 
 ## Control previo a publicación
 
 `python tests/check_publication.py CARPETA_LIMPIA --private-env .env` comprueba nombres prohibidos, credenciales locales conocidas y patrones de tokens. Para PDF requiere `python -m pip install pypdf`. Extrae texto de PDF y XML del DOCX; revisar también capturas visualmente. Ejecutar contra una carpeta de publicación limpia, no contra el entorno operativo que deliberadamente contiene `.env`. No sustituye una auditoría de secretos desconocidos ni permisos legales.
+
+## Regresión de sesión y entrega final
+
+Se reprodujo antes del arreglo `/ui/session` HTTP 200 junto con el aviso de 401 antiguo. Después, `tests/test_session_message.cjs` pasa para los cuatro roles: expiración de cookie, login, logout/relogin, Live/Historial/Sistema, tres estaciones, CSV y separación 401/403. Incluye un rol configurado sin simulate: nota explicativa, botón no disponible y backend 403; restaura permisos al finalizar. Ejecutar con las mismas variables TEST_BASE_URL, TEST_ACCOUNTS_FILE y TEST_BROWSER_PATH del fixture:
+
+```powershell
+node tests/test_dashboard.cjs
+node tests/test_session_message.cjs
+node tests/test_viewer.cjs
+```
+
+La regresión se repitió además en localhost:8080 Docker con la cuenta supervisora heredada: sesión 200 después de reingresar, franja vacía. Las cuentas particulares del equipo no se restablecieron para probarlas. Se reconstruyó Docker, se ejecutaron 9 pruebas Python locales y 9 en contenedor, 2 pruebas Node y los recorridos de navegador. Las 38 inspecciones sobreviven al reinicio. Hay una advertencia de deprecación de AnyIO/Starlette, no una prueba fallida.
+
+La nueva comprobación HTTPS pública está en evidencias/cloudflare-verificacion.json: / 200, health 200, info sin token 401 y autenticado 200; eventos y administración sin sesión 401. Se hizo desde el equipo a través del servicio público, no desde un móvil. La URL sigue siendo temporal y debe revalidarse en clase.
