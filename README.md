@@ -102,3 +102,8 @@ La paleta naranja/blanco/verde deriva del sitio público de IMACASA y ajustes de
 [Corrección de sesión](docs/CORRECCION_SESION.md) · [Colaboración de cuatro integrantes](docs/COLABORACION.md) · [API](docs/API.md) · [Despliegue](docs/DESPLIEGUE.md) · [Modelos propuestos](docs/IA_MODELOS.md) · [Matriz oficial de 100 puntos](docs/MATRIZ_RUBRICA.md) · [Revisión de material publicable](docs/REVISION_PUBLICACION.md).
 
 El paquete incorpora las 12 capturas sintéticas y los DOCX/PDF sanitizados autorizados tras revisión. El informe permanece preliminar; los originales privados no se modificaron. No contiene credenciales de presentación.
+
+
+## Actualización académica posvisita
+
+El informe vigente es [Word](docs/informe/CP1_PC08_final_sanitizado.docx) / [PDF](docs/informe/CP1_PC08_final_sanitizado.pdf), con [matriz de rúbrica](docs/MATRIZ_RUBRICA.md), [registro de visita](docs/VISITA_IMACASA.md) y [guía de presentación](docs/PRESENTACION_PC08.md). Los preliminares quedan históricos. No hay modelo ni cámara real conectados.

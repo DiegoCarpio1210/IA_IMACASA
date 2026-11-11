@@ -43,3 +43,10 @@ docs/informe/*.docx
 !docs/evidencias/supervisor-historial.png
 !docs/informe/CP1_PC08_preliminar_sin_credenciales.docx
 !docs/informe/CP1_PC08_preliminar_sin_credenciales.pdf
+
+# Entregables posvisita autorizados y sanitizados
+!docs/informe/CP1_PC08_final_sanitizado.docx
+!docs/informe/CP1_PC08_final_sanitizado.pdf
+!docs/evidencias/contexto-posvisita.png
+!docs/evidencias/api-posvisita.png
+!docs/evidencias/login-posvisita.png

@@ -1,0 +1,18 @@
+{
+  "review_date": "2026-11-11",
+  "body_pages_including_cover": 10,
+  "reference_pages": 1,
+  "private_pages": 11,
+  "private_body_matches_sanitized": true,
+  "visual_review": "11 páginas inspeccionadas; tablas completas, figuras legibles, sin recortes de texto",
+  "sources_checked": 10,
+  "publication_files_sha256": {
+    "informe/CP1_PC08_final_sanitizado.docx": "8314969a21d9e49ec4d2f33b2968d0820d3a64273f726ad0ad7ede5325f3b6bc",
+    "informe/CP1_PC08_final_sanitizado.pdf": "69a4833cd6f7c012e599cf2cc8818f4ae605ae53eeb06525b34778d3ecf92db3",
+    "evidencias/api-posvisita.png": "a8c6829d2f6515807f52313de4e0622ad0c62ceadbb51fe74e881cc83e55e521",
+    "evidencias/contexto-posvisita.png": "ecca7116f8cd18bd40eafca677162b1580fb9117d6ed83f945c358d15f812db7",
+    "evidencias/login-posvisita.png": "4f80db34fd363a11141059b1cd92254a61127f59f158a5c741b40155d2656c08"
+  },
+  "secrets": "se verifican nuevamente sobre staging; copia privada excluida",
+  "renderer": "Word PDF export; renderer empaquetado no disponible por falta de LibreOffice; rasterización PDFium"
+}

@@ -1,7 +1,5 @@
-# Informe preliminar completo y sanitizado
+# Informe académico vigente
 
-Se publican las copias DOCX y PDF completas autorizadas, además de la extracción TXT. Los 14 archivos antes excluidos (12 capturas y estos dos informes) fueron revisados antes de incorporarlos. No se sustituyó el original por un resumen ni se cambiaron datos industriales.
+CP1_PC08_final_sanitizado.docx y .pdf son la actualización posvisita del 11/11/2026. El .md conserva el texto editable. Los documentos preliminares se retienen solo como historial; sus hipótesis pre-visita no prevalecen sobre la nueva propuesta.
 
-El PDF tiene 10 páginas: 9 de cuerpo y 1 de referencias. Contiene una captura anterior y resultados históricos; consultar CORRECCION_SESION.md y PRUEBAS.md para el estado actual. No es una versión definitiva posterior a la visita. La URL histórica es temporal y las credenciales se retiraron de la portada. Los originales locales privados permanecen intactos y fuera de GitHub.
-
-Preparar después la copia privada de evaluación con URL activa y credencial temporal, según la rúbrica; no subir esa copia a GitHub.
+La versión sanitizada no contiene tokens ni fotos industriales. La versión privada está fuera del repositorio, en outputs/entrega-privada-PC08, con campos delimitados para datos de evaluación. Completar siguiendo PRESENTACION_PC08.md y revisar el PDF nuevamente. El número de equipo sigue pendiente.

@@ -43,3 +43,8 @@ Repositorio destino privado: `DiegoCarpio1210/IA_IMACASA`. Se prepara rama de de
 La instrucción final amplió la autorización para incluir las 12 capturas y el DOCX/PDF sanitizados después de revisar su contenido. REVISION_PUBLICACION.md registra archivos y hashes; MATRIZ_RUBRICA.md contrasta el PDF oficial. COLABORACION.md distribuye cuatro funciones y explica clonado, ramas y PR sin fusiones automáticas. API.md y DESPLIEGUE.md documentan contratos y ejecución; IA_MODELOS.md conserva la propuesta bibliográfica y sus límites.
 
 El arreglo de la franja no cambia permisos: limpia estado de errores entre sesiones, separa 401/403 y descarta solicitudes de sesiones anteriores. Los originales privados y la propuesta industrial permanecen intactos. Ver CORRECCION_SESION.md y PRUEBAS.md para resultados actuales; las secciones anteriores describen la actualización previa.
+
+
+## Actualización posvisita 11 de noviembre de 2026
+
+Informe nuevo sin sobrescribir originales; datos de visita y enfoque híbrido; cálculos y diagramas nuevos; cambio mínimo de texto en index.html; pruebas repetidas y evidencia HTTPS nueva. No se modifican API, usuarios, permisos o eventos. Publicación autorizada de los entregables sanitizados y capturas del demo; se excluyen originales privados, .env y fotos industriales.

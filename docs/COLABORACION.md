@@ -61,3 +61,8 @@ node --test tests/test_images.cjs
 ```
 
 Seguir `docs/PRUEBAS.md` para fixture y variables de navegador; ejecutar dashboard, sesión y visor en ese orden (el visor agrega dos eventos al fixture). Confirmar 401/403 y aislamiento cuando se toque autenticación; revisar responsivo al cambiar UI. Escanear la carpeta de publicación con `tests/check_publication.py`, revisar capturas y documentos manualmente, y comprobar `git diff --cached`. No publicar `.env`, SQLite, WAL/SHM, backups, cookies o credenciales de fixture. Los roles industriales y tolerancias siguen pendientes de la visita.
+
+
+## Entrega posvisita
+
+Distribución vigente: integrante 1 frontend/demo; integrante 2 backend/API/Docker; integrante 3 informe/evidencias; integrante 4 integración/IA/calidad. No se asignan nombres sin acuerdo del equipo. Trabajar desde feature/pc08-rbac-dashboard en ramas individuales y PR hacia esa rama mientras PR #1 permanezca abierto. El informe vigente es CP1_PC08_final_sanitizado; reservar un editor DOCX y revisar contenido en Markdown para reducir conflictos. Las fotos industriales requieren autorización independiente; la copia privada del docente nunca se sube. No se agregaron colaboradores ni se cambiaron permisos.

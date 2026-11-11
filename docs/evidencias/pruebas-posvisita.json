@@ -1,0 +1,54 @@
+{
+  "review_date_local": "2026-11-11",
+  "timezone": "America/El_Salvador",
+  "pytest_local": 9,
+  "pytest_docker": 9,
+  "node_images": 2,
+  "browser_roles": [
+    "admin",
+    "supervisor",
+    "herrero",
+    "pulidor"
+  ],
+  "browser_checks": [
+    "gráficos",
+    "filtros",
+    "exportación",
+    "401/403",
+    "sesión caducada y reingreso",
+    "rol configurado sin simulate",
+    "imagen distinta por evento",
+    "zoom/desplazamiento/giro/enfoque/restauración",
+    "contexto separado de métricas",
+    "8 defectos y OK",
+    "3 estaciones"
+  ],
+  "fixture": "aislada, sin mutación de eventos operativos",
+  "operational_events": {
+    "count": 38,
+    "sha256": "6b1432fd6d4d7608714a4c7b3b980718eb928655fb714e8c91d5bdb2edd66732"
+  },
+  "filter_ids": [
+    32,
+    27,
+    26,
+    2
+  ],
+  "docker_rebuild": "PASS",
+  "docker_restart": "PASS",
+  "container_file_hashes": "PASS",
+  "api": [
+    200,
+    401,
+    200
+  ],
+  "https_evidence": "cloudflare-posvisita.json",
+  "warning": "AnyIO/Starlette deprecation, sin fallos",
+  "not_claimed": [
+    "rendimiento IA",
+    "cámara conectada",
+    "prueba en Victus",
+    "prueba física desde móvil en esta revisión",
+    "disponibilidad futura del túnel"
+  ]
+}

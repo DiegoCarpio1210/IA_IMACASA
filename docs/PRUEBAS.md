@@ -79,3 +79,10 @@ node tests/test_viewer.cjs
 La regresión se repitió además en localhost:8080 Docker con la cuenta supervisora heredada: sesión 200 después de reingresar, franja vacía. Las cuentas particulares del equipo no se restablecieron para probarlas. Se reconstruyó Docker, se ejecutaron 9 pruebas Python locales y 9 en contenedor, 2 pruebas Node y los recorridos de navegador. Las 38 inspecciones sobreviven al reinicio. Hay una advertencia de deprecación de AnyIO/Starlette, no una prueba fallida.
 
 La nueva comprobación HTTPS pública está en evidencias/cloudflare-verificacion.json: / 200, health 200, info sin token 401 y autenticado 200; eventos y administración sin sesión 401. Se hizo desde el equipo a través del servicio público, no desde un móvil. La URL sigue siendo temporal y debe revalidarse en clase.
+
+
+## Revisión posvisita del 11 de noviembre
+
+Verificación del 11/11/2026: 9 pruebas Python locales y 9 en Docker, 2 de imágenes y recorridos de cuatro roles aprobados. Se verificaron filtros, exportación, gráficos, visor, 401/403 y regresión de sesión. Docker conservó 38 eventos y el filtro histórico; HTTPS respondió 200/401/200. Son pruebas de software, no métricas de IA. La Victus y la disponibilidad en clase no se dan por verificadas.
+
+Pruebas del navegador sobre base aislada, sin generar eventos en el historial operativo. Incluye aviso de solo lectura cuando se retira simulate y bloqueo 403. La nueva sección de contexto conserva ocho defectos más OK y tres estaciones. AnyIO/Starlette emitió una advertencia de deprecación, sin fallo. Captura api-posvisita.png representa las respuestas reales registradas en cloudflare-posvisita.json, con token omitido; no es una captura de consola Docker. El arranque de Docker se repitió, API healthy y UI actualizada. No se repitió prueba física desde teléfono en esta revisión.

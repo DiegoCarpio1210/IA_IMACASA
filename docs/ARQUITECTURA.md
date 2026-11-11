@@ -50,3 +50,8 @@ Sin sesión: 401. Con sesión pero sin capacidad/ámbito: 403. Filtros inválido
 Total = cantidad de filas autorizadas y filtradas; OK y defectos por veredicto; rechazo simulado = 100 × defectos / total, redondeado a 1 decimal, nulo si no hay filas. Pendientes = review_status pending. Agrupaciones por defecto, día de El Salvador y propietario asignado. PC10/12 no entran en estas métricas. La comparación por propietario se muestra al jefe únicamente con al menos dos usuarios con registros en la selección; no mide productividad ni prueba asociación industrial correcta.
 
 El dashboard muestra pastel, barras, líneas, comparación por jornada y tabla de frecuencias. El operativo reduce la vista a sus métricas y dos gráficos; el administrativo usa formularios y auditoría. La revisión humana confirma/descarta un evento del demo, no aprueba un machete real. La asociación de eventos nuevos es al usuario autenticado; el backend permite al jefe asignar PC08 a una cuenta activa. No hay asignación por defecto industrial.
+
+
+## Propuesta industrial vigente tras la visita
+
+La arquitectura de software anterior permanece implementada. La propuesta industrial actual está en el informe final pp. 6–8 y diagramas/arquitectura-posvisita.svg: captura previa entre Pulido y PC08, banco detenido de dos cámaras, perfiles y superficie, PatchCore + OpenCV, revisión humana y distribución futura a 6–8 puestos. Los diagramas flujo-propuesto.svg y soporte-conceptual.svg anteriores son históricos y quedan sustituidos conceptualmente por los archivos posvisita. No hay cámara ni banda conectada al demo.

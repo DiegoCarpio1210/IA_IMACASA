@@ -24,3 +24,16 @@ La revisión automática anterior rechazó una imagen por no poder verificar un 
 | `docs/informe/CP1_PC08_preliminar_sin_credenciales.pdf` | `65f284fe98d7c43852d16952774664a35d82c70397995377032040cc9ee28602` |
 
 Las capturas y el informe son evidencia académica, no de funcionamiento industrial. Los SVG del soporte y flujo son diseños conceptuales propios sin información confidencial. El PDF oficial de rúbrica se consultó localmente y no se redistribuye como material propio. Se mantienen fuera .env, SQLite/WAL/SHM, contraseñas, sesiones, respaldos e imágenes de planta.
+
+
+## Paquete posvisita autorizado el 11 de noviembre
+
+El prompt maestro autoriza publicar los entregables sanitizados. Se inspeccionaron todas las páginas y tres capturas nuevas; no hay fotos industriales ni secretos visibles. La copia privada del docente permanece fuera del repositorio. El PDF contiene 10 páginas de cuerpo y 1 de referencias.
+
+| Archivo | SHA256 revisado |
+|---|---|
+| informe/CP1_PC08_final_sanitizado.docx | 8314969a21d9e49ec4d2f33b2968d0820d3a64273f726ad0ad7ede5325f3b6bc |
+| informe/CP1_PC08_final_sanitizado.pdf | 69a4833cd6f7c012e599cf2cc8818f4ae605ae53eeb06525b34778d3ecf92db3 |
+| evidencias/api-posvisita.png | a8c6829d2f6515807f52313de4e0622ad0c62ceadbb51fe74e881cc83e55e521 |
+| evidencias/contexto-posvisita.png | ecca7116f8cd18bd40eafca677162b1580fb9117d6ed83f945c358d15f812db7 |
+| evidencias/login-posvisita.png | 4f80db34fd363a11141059b1cd92254a61127f59f158a5c741b40155d2656c08 |
