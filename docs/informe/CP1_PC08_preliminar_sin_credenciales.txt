@@ -1,0 +1,425 @@
+INFORME PRELIMINAR SANITIZADO — EXTRACCIÓN DE TEXTO
+No es una nueva versión definitiva. Las figuras permanecen locales.
+
+
+PÁGINA 1
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 1
+Propuesta de inspección asistida para
+Enderezado PC08
+Checkpoint 01 de Ingeniería de la IA
+IMACASA · Pimientero G2 · Equipo 01 provisional
+Integrantes
+Diego Roberto Carpio Flamenco
+Julio Roberto Guardado Quijano
+Iván Daniel Salguero Esperanza
+Alfredo Enmanuel Cortez Martínez
+Exposición: jueves 12 de noviembre de 2026, 6:50 a. m.
+El Salvador · Documento elaborado el 9 de noviembre de 2026
+Conclusión y alcance
+Proponemos iniciar con detección de anomalías superficiales mediante PatchCore y conservar pruebas
+instrumentales para geometría y propiedades del material. El demo web y la API funcionan; todavía no existe un
+sistema entrenado que inspeccione machetes reales. Este informe separa la implementación demostrable, los
+eventos simulados y la propuesta de seis meses.
+No contamos con fotografías de defectos, tolerancias oficiales ni definiciones operativas completas de IMACASA.
+Los tamaños de muestra y parámetros de captura siguientes son presupuestos de diseño sujetos a un piloto, no
+resultados experimentales ni criterios de aceptación de la empresa.
+Acceso temporal verificado
+URL de prueba
+https://stem-increasingly-foster-kennedy.trycloudflare.com
+GET /info — Authorization: Bearer [CREDENCIAL RETIRADA]
+Credenciales omitidas en la copia del repositorio. Configuración local en .env.
+Revalidación externa: /health 200; /info sin credenciales 401; /info autenticado 200. Quick Tunnel es temporal: la
+continuidad de esta URL durante la exposición no está confirmada. Volver a verificarla antes de presentar. [14]
+
+PÁGINA 2
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 2
+1 Defectos y viabilidad de inspección
+Los ocho defectos y criterios proceden del checkpoint oficial. [1] Una foto frontal evidencia apariencia; no
+demuestra profundidad, planitud ni dureza. La etiqueta final requiere criterio del inspector y trazabilidad por
+pieza. “Especial” significa una adquisición controlada adicional, no garantía de automatización.
+Defecto Viabilidad y captura Tarea propuesta de ML Alternativa o confirmación
+Golpes
+Especial: luz rasante opuesta y ambas
+caras; una foto difusa puede ocultar
+relieve.
+Mapa de anomalía;
+segmentación del área visible.
+Comparador de altura o perfilómetro
+si importa profundidad.
+Huellas
+Condicional: falta definir qué llama
+IMACASA “huella”. Difusa y rasante
+para caracterizar.
+Anomalía superficial; clasificar
+solo tras acordar ejemplos.
+Inspección experta; perfilómetro si es
+marca en relieve. No asumir huella
+digital.
+Poros
+Especial: macro y rasante; resolución
+suficiente. Solo poros abiertos
+visibles.
+Localización de anomalías;
+segmentación de cavidades
+visibles.
+Microscopía o perfilometría. Ensayo
+apropiado si se sospecha defecto
+interno.
+Ondulado del
+lomo
+Especial: perfil con contraluz y
+referencia geométrica. Frontal aislada
+insuficiente.
+Segmentar contorno y medir
+desviación; ML no es
+obligatorio.
+Regla patrón, mármol y comparador;
+tolerancia por confirmar.
+Enconchados
+Condicional: término local sin
+definición confirmada. Registrar caras
+y perfiles.
+Si es relieve: anomalía y
+medición 3D; tarea pendiente
+de definición.
+Inspector y perfilómetro/comparador
+según fenómeno; no equiparar sin
+evidencia a un defecto estándar.
+Torcido
+Especial: múltiples perfiles o medición
+3D; una vista 2D no determina
+torsión.
+Segmentación de bordes y
+estimación geométrica
+multivista.
+Útil de referencia y comparador en
+secciones; escáner 3D si se justifica.
+Mal pulido 2D controlada para apariencia;rasante complementaria. Anomalía de textura osegmentación de rayas. Rugosímetro si la especificación es derugosidad; brillo visual no equivale aRa.
+Hoja ampollada
+o quemada
+2D difusa para color; rasante para
+ampollas. No infiere daño
+metalúrgico.
+Anomalía de color/textura;
+separar subtipos al etiquetar.
+Perfilometría para ampollas y
+dureza/metalografía según validación
+de calidad.
+Marco bibliográfico: ISO 8785 aporta vocabulario de imperfecciones; ISO 1101, especificación geométrica; ISO
+21920-2, parámetros de textura; ISO 14253-1, decisión con incertidumbre; ISO 6508-1, ensayo Rockwell. Se
+consultaron fichas oficiales, no el texto normativo completo. No afirmamos que IMACASA adopte estas normas ni
+derivamos tolerancias de ellas. [9–13]
+
+PÁGINA 3
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 3
+2 Cantidades y partición de los datos
+Presupuesto inicial, no mínimo universal: 300 piezas conformes y hasta 520 defectuosas distintas. Para cada clase
+de 60 piezas proponemos 3 lotes × 2 condiciones de acabado × 10 piezas; para poros y ampollada/quemada, 4
+lotes × 2 condiciones × 10 = 80. Las 300 conformes cubren 5 lotes × 3 jornadas × 20. Son cuotas a negociar, no
+lotes ya disponibles.
+Grupo de piezas Piezasfísicas Fotos base a 8 porpieza Validación y prueba de anomalías
+Conformes 300 2400 210 train / 45 val / 45 test
+Golpes 60 480 30 val / 30 test
+Huellas — reserva condicional 60 480 30 val / 30 test
+Poros 80 640 40 val / 40 test
+Ondulado del lomo 60 480 30 val / 30 test
+Enconchados — reserva condicional 60 480 30 val / 30 test
+Torcido 60 480 30 val / 30 test
+Mal pulido 60 480 30 val / 30 test
+Ampollada o quemada 80 640 40 val / 40 test
+Total base 820 6560 210 train / 305 val / 305 test
+Las fotos de piezas defectuosas no son automáticamente imágenes positivas: solo se etiqueta el defecto donde
+sea visible. Una pieza con varios defectos conserva varias etiquetas y un solo identificador. La suma supone
+grupos distintos; al haber solapamiento se recalcula el total único. Sin las dos clases todavía ambiguas: 700 piezas
+y 5 600 fotos base.
+Detalle y prevención de fuga de datos
+Añadir un módulo piloto de cuatro macrofotografías por pieza para 80 piezas con poros y 100 conformes ya
+incluidas: 180 × 4 = 720 fotos, sin nuevas piezas. Total planificado: 7 280 imágenes de hasta 820 machetes. El
+módulo debe demostrar cobertura de la región elegida; no certifica toda la hoja. Si se necesitan más mosaicos, se
+amplía el presupuesto antes de capturar.
+Para PatchCore y PaDiM solo las 210 conformes de train ajustan la normalidad: 1 680 fotos base; val tiene 2 440 y
+test 2 440. Las 100 conformes del módulo macro se reparten 70/15/15 y las 80 con poros 0/40/40: totales con
+macro 1 960 train, 2 660 val y 2 660 test. Las vistas y derivados de un machete nunca cruzan particiones; reservar
+sesiones o lotes completos para test, ajustando cuotas y registrando cambios.
+Si se entrena YOLO, conservar las mismas 305 piezas de test para comparar. Dividir las 260 defectuosas restantes
+en 208 train y 52 val: por clase de 60, 24/6/30; por clase de 80, 32/8/40. Con las conformes 210/45/45 se
+obtienen 418/97/305 piezas. El reparto desigual preserva el test común; no se aplica 70/15/15 ciegamente a
+ambos métodos.
+
+PÁGINA 4
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 4
+3 Protocolo de captura y evaluación
+Vista base Cantidad Uso y condiciones
+Frontal difusa 2 Una por cara. Fondo mate uniforme; exposición, balance de blancos y distancia fijos. Color ytextura de pulido.
+Frontal rasante 4 Dos direcciones opuestas por cara, pieza inmóvil. Revela golpes, poros y ampollas;documentar ángulo y potencia.
+Perfiles ortogonales 2 Vista lateral y del lomo, contraluz, apoyo repetible y referencia de escala coplanar. Cribadode ondulado y torcido, sin afirmar medición 3D completa.
+Macro adicional 4 Solo módulo piloto: dos regiones por cara, fijadas previamente. Poros y negativos difíciles.Conservar posición y escala respecto a la vista general.
+Asignar ID de pieza, lote, jornada, cara, vista, cámara, lente, exposición y etiqueta del inspector. Capturar antes de
+alterar la superficie; registrar limpieza o manipulación. El útil sujeta sin deformar y mantiene el filo protegido.
+Guardar original sin filtros, preferentemente PNG/TIFF, y derivado para el modelo con transformación registrada.
+Fotografiar patrón dimensional y carta de color al iniciar o cambiar montaje.
+Rechazar desenfoque, saturación sobre la zona de interés, sombras que la oculten y encuadre incompleto.
+Comparar iluminación difusa, rasante y contraluz en el piloto; ensayar polarización si reduce reflejos sin borrar
+señal útil. No fijar lux o exposición sin imágenes reales. Estas decisiones se basan en principios de iluminación, no
+en pruebas realizadas. [8]
+Etiquetado y aumentación
+Dos integrantes anotan y el inspector resuelve desacuerdos. Guardar máscara o región visible, subtipo, visibilidad
+y estado “indeterminado”. El resultado por pieza combina todas sus vistas. No asignar OK por ausencia de señal
+en una vista insuficiente. Separar referencia instrumental de etiqueta visual.
+Aumentación solo en train: pequeñas traslaciones, rotación inicialmente ±3° y brillo inicialmente ±10%, sujetos a
+revisión visual. No cambiar tono al estudiar quemado, borrar poros con desenfoque ni deformar geometría para
+torsión. Dos variantes por imagen pueden triplicar presentaciones al modelo, pero no triplican piezas
+independientes. No aumentar val/test; para PatchCore verificar que los cambios no amplíen indebidamente la
+normalidad.
+Cómo decidir si los datos bastan
+Hacer curvas de aprendizaje con 50, 100 y 210 conformes, agrupadas por pieza. Medir sensibilidad por defecto y
+por pieza, falsos rechazos en conformes, localización cuando exista máscara y latencia total p50/p95. Elegir
+umbral con val y bloquearlo antes del test. La proporción artificial del conjunto no estima prevalencia de fábrica:
+incorporar después una muestra consecutiva de producción.
+Con 30 piezas defectuosas en test, incluso cero omisiones deja una cota aproximada de 3/30 = 10% para la tasa de
+omisión al 95%; con 40, 7,5%. Esta regla aproximada supone ensayos independientes y explica por qué el piloto
+no certifica desempeño industrial. La empresa deberá acordar riesgo aceptable y ampliar la prueba. Ninguna
+exactitud local se ha medido todavía.
+
+PÁGINA 5
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 5
+4 Modelos preentrenados y selección
+Comparamos dos métodos de anomalías con extractores ImageNet y un detector supervisado COCO. Sus tareas y
+protocolos de latencia difieren; los valores publicados no predicen el rendimiento de la RTX 4050 del equipo.
+Candidato y tarea Tamaño de referencia Latencia publicada Limitación principal
+PatchCore con Wide ResNet50 2
+Anomalía y mapa por píxel [2,5]
+68,88 M de parámetros en
+la red completa de
+referencia; extractor parcial
+y banco coreset adicionales.
+0,22 s por imagen con coreset
+10%, resolución de referencia
+224; operaciones GPU cuando
+posible. No benchmark local.
+Banco crece con datos y
+parches. Detecta diferencia
+de apariencia; no nombra
+los ocho defectos ni mide
+profundidad.
+PaDiM con ResNet18
+Anomalía y localización [3,6]
+11,69 M en backbone
+completo; estadísticas
+gaussianas por posición,
+dimensión reducida 100.
+0,23 s por imagen, CPU Intel i7
+4710HQ a 2,50 GHz, ejecución
+serial en MVTec.
+Requiere registro espacial
+consistente; cambios de
+posición o iluminación
+alteran distribución.
+Memoria estadística no
+incluida en parámetros.
+YOLO11n preentrenado
+Detección de cajas [4]
+2,6 M de parámetros;
+entrada 640; 6,5 GFLOPs
+publicados.
+56,1 ± 0,8 ms CPU ONNX; 1,5
+ms T4 TensorRT10, protocolo
+de Ultralytics.
+Sus clases COCO no son
+defectos PC08. Necesita
+cajas reales y ajuste
+supervisado. Microdefectos
+pueden desaparecer al
+reducir resolución.
+Modelo principal propuesto
+Seleccionamos PatchCore como primera línea de investigación para apariencia superficial: permite aprovechar
+piezas conformes cuando reunir rechazos es difícil y entrega una región de atención. Proponemos iniciar con
+coreset 10% y contrastar 1% en validación. El resultado inicial será “anomalía que requiere revisión”, no un
+diagnóstico autónomo del tipo de defecto. La geometría seguirá un módulo de contornos calibrados y
+confirmación instrumental.
+El tamaño del banco debe medirse. Como presupuesto, 100 000 vectores × 1 536 componentes × 4 bytes
+ocuparían 614,4 MB, antes del índice y activaciones. No es memoria medida. Con 16 GB de RAM conviene limitar
+banco y comparar PaDiM si los recursos no alcanzan; VRAM exacta pendiente. Separar modelos o bancos por vista,
+iluminación y familia de hoja; no mezclar perfiles y macro con frentes difusos como una sola distribución.
+PyTorch y torchvision reutilizan conocimientos del curso y permiten controlar extractor y preprocesamiento.
+OpenCV cubre calibración, recorte y contornos; empezar con estos baselines ayuda a demostrar si ML aporta
+valor. YOLO11n sería la segunda etapa si necesitamos nombres de defectos y logramos suficientes etiquetas.
+RoBERTa y DeBERTa procesan texto y no sustituyen un extractor visual; LoRA y segmentación panóptica no
+resuelven por sí solas la falta de datos.
+Prueba futura en la Victus: fijar versiones, resolución, batch 1 y calentamiento; cronometrar al menos 100
+inferencias y el ciclo completo por pieza, con p50/p95 y RAM/VRAM máximas. Comparar sobre las mismas piezas
+de test. No convertir FPS del fabricante o del artículo en capacidad de la línea.
+
+PÁGINA 6
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 6
+5 Arquitectura industrial propuesta
+El diseño de seis meses usa inferencia local para mantener operación durante fallos de Internet y evitar enviar
+imágenes industriales continuamente. La nube o el túnel sirven para demostración y supervisión autorizada; no
+controlan el rechazo de piezas.
+Flujo y responsabilidades
+Pieza e ID → disparo y cámara → servicio de captura y control de calidad → cola local → preprocesamiento e
+inferencia → decisión con revisión humana → registro en base de datos y almacenamiento de imágenes → API →
+interfaz e historial.
+Componente Demo actual Propuesta industrial
+Adquisición Imagen SVG sintética distinta porevento; no cámara. Servicio pylon con disparo, secuencia de luces, ID y detección decaptura inválida.
+Inferencia Sin modelo; resultado y confianzasimulados. Worker PyTorch PatchCore y módulo geométrico; versión de modelo,umbral y preprocesamiento registrados.
+Transporte HTTP interno entre UI y API. Cola local persistente con reintento e ID idempotente; no perder niduplicar piezas.
+Persistencia SQLite de eventos en volumen Docker. PostgreSQL para piezas, capturas y resultados; archivos u objeto S3compatible para originales, hash y política de respaldo.
+Servicios y
+acceso
+FastAPI/Uvicorn, UI web y Quick
+Tunnel.
+Servicios separados, roles, secretos externos, TLS y acceso
+restringido; métricas, logs y recuperación offline.
+Operación Demostración académica. Revisión humana de anomalía o incertidumbre; integración PLC solotras validar tiempos y seguridad.
+Cámara y capacidad óptica
+Referencia comercial: Basler acA2440-35uc, cámara de área a color de 5 MP, resolución por defecto 2 448 × 2 048,
+sensor Sony IMX264, global shutter, 35 fps nominales, USB 3.0 y montura C. Permite disparo hardware/software.
+Preferimos área para una pieza detenida y varias luces; una cámara lineal exigiría transporte y sincronización que
+aún no conocemos. Su disponibilidad comercial y cotización deben confirmarse antes de adquirir. [7]
+Ejemplo de dimensionamiento, no longitud oficial: un campo de 600 mm sobre 2 448 píxeles produce 0,245
+mm/píxel; una marca hipotética de 0,5 mm ocupa apenas 2 píxeles. Con campo macro de 150 mm serían 0,0613
+mm/píxel y 8,2 píxeles. Por ello una foto completa no basta para prometer detección de poros pequeños. Definir
+tamaño mínimo real con IMACASA antes de elegir lente, mosaicos o más resolución.
+Soporte conceptual: marco rígido cerrado a luz ambiente; columna regulable para cámara cenital; lente C
+compatible con sensor de 2/3 de pulgada, focal pendiente de distancia y campo; difusor superior, dos barras
+rasantes conmutables y panel de contraluz para perfiles. Útil con topes y apoyos que no enderecen artificialmente
+la hoja. Primero reposicionar con guía; automatizar volteo o añadir cámaras solo si el tiempo de ciclo lo exige.
+
+PÁGINA 7
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 7
+6 Auditoría de la interfaz
+Elegimos web porque permite usar las cuatro computadoras y el celular sin instalar una aplicación, y concentra
+mantenimiento y acceso al historial. El navegador puede mostrar el demo sin Docker; Docker se requiere en el
+equipo servidor. El visor admite zoom, desplazamiento, giro 2D y foco ilustrativo; no es un modelo 3D del
+machete.
+Figura 1. Visor actualizado en prueba local. Imagen simulada SIM 0029; la captura anterior SIM 0028 se conserva como evidencia
+separada. No acredita cámara, IA ni Docker.
+Requisito Hallazgo y alcance
+Acceso y estaciones Inicio de sesión implementado; PC08, PC10 y PC12 disponibles conceptualmente.
+Resultado e historial OK/defecto, tipo y confianza simulada; filtros por estación, fecha y defecto, persistencia SQLite yCSV.
+Imagen entrante en tiempo
+real
+Corregido en el demo local: cada evento carga una imagen SVG sintética diferenciada. Se actualiza
+al generar o consultar un evento nuevo; el mismo evento conserva su imagen.
+Corrección mínima
+implementada
+El frontend deriva ID, URL de datos y origen SIMULADA del evento existente. Cambian trazos e
+identificador de la imagen, incluso con el mismo defecto. Estado sin imagen incluido; no cambia
+autenticación, historial ni API.
+Validación local: 3 pruebas Python existentes, 2 del generador y una prueba en Chromium aprobadas. Esta última
+verifica cambio de imagen y píxeles entre inspecciones, estabilidad al consultar, zoom, giro, enfoque y estado
+vacío. La imagen se sintetiza en el navegador; no procede de cámara ni IA. Confianza y marcadores siguen siendo
+ilustrativos. Pendiente desplegar esta actualización en la Victus.
+
+PÁGINA 8
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 8
+7 API y evidencias técnicas
+La API mock define únicamente GET /health y GET /info, sin documentación OpenAPI expuesta. La UI es un
+servicio separado y añade sus rutas propias. El túnel actual apunta a la UI, que reenvía las dos rutas a la API
+preservando Authorization; distinguir este gateway público del contrato de dos endpoints del servicio API.
+Comprobación Resultado disponible Naturaleza de evidencia
+GET /health sin token HTTP 200 Repetido externamente el 9 nov 2026.
+GET /info sin token HTTP 401 Repetido externamente el 9 nov 2026.
+GET /info con API_TOKEN HTTP 200 Repetido externamente el 9 nov 2026; secreto no impreso enlogs.
+Docker y Compose Operativos; API healthy Declarado y verificado por el equipo; faltan capturasconservadas para anexar.
+Cloudflare y celular Acceso externo exitoso
+Declarado por el equipo. Las peticiones externas actuales
+prueban accesibilidad, no el estado interno de los
+contenedores.
+Contrato y despliegue reproducible
+Cuerpos JSON también comprobados y archivados sin secretos: /health → {"status":"ok"}; /info → equipo
+“Pimientero G2 — Equipo 01 (provisional)”, estacion “PC08”, version “1.0.0” y timestamp UTC. Sin token: 401.
+Registro: 9 nov 2026, 19:58:58 de El Salvador, equivalente a 10 nov 01:58:58 UTC. La sesión web y API_TOKEN son
+independientes.
+El proyecto incluye Dockerfile basado en Python 3.12 slim, dependencias fijadas, usuario sin privilegios y volumen
+para historial. Compose separa api y ui, con túnel en el perfil publico. Comandos previstos desde el proyecto:
+docker compose up -d --build; docker compose --profile publico up -d; docker compose ps. La disponibilidad exige
+que servidor y proceso de túnel permanezcan activos.
+Capturas seleccionadas y pendientes
+Disponibles: Figura 1 del visor. Para completar el expediente capturar: (a) login sin contraseña visible; (b) historial
+con filtros; (c) docker compose ps con api healthy y UI activa; (d) Dockerfile y comando de arranque; (e) consola
+Cloudflare con URL y conexión; (f) las tres peticiones, estado HTTP y JSON, ocultando Authorization; (g) acceso en
+celular. No sustituir estas capturas por gráficos recreados.
+Una prueba HTTP no demuestra por sí sola que Docker esté ejecutándose. Tampoco prueba disponibilidad futura
+del túnel. Antes de exponer, repetir los tres códigos y acceso desde red móvil, conservar hora y cuerpos JSON,
+comprobar la URL de la portada y mantener el servidor encendido. Si cambia, actualizar portada y enlaces. No
+confundir UI_PASSWORD con API_TOKEN.
+La configuración actual permite presentar la UI y la API en una sola URL. Si el docente interpreta “solo dos
+endpoints” como restricción del host público completo, usar un túnel dirigido directamente al servicio API y
+presentar la UI por separado. No se ha cambiado el despliegue remoto durante esta elaboración.
+
+PÁGINA 9
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 9
+8 Plan de seis meses y autoevaluación
+Mes Entregable y criterio de avance
+1 Definir ocho defectos con inspector, tolerancias y método de referencia; confirmar seguridad, dimensiones, tiempo deciclo y mínimo defecto visible.
+2 Piloto óptico, útil y catálogo de vistas; demostrar visibilidad y repetibilidad antes de ampliar captura. Ajustar cuotas ycoste de etiquetado.
+3 Dataset versionado y partición por pieza/lote; revisión de etiquetas; baseline OpenCV, PatchCore y PaDiM sin tocar test.
+4 Comparación y umbrales con val; YOLO solo si hay etiquetas suficientes. Registrar latencia y memoria reales; ampliarmuestra si no es concluyente.
+5 Integración de captura industrial, worker y base con UI; prueba de pérdida de red, reinicio y recuperación de cola;operación en sombra.
+6 Test bloqueado, revisión humana y contraste instrumental; informe de errores y decisión de continuar, rediseñar odetener. No automatizar rechazo sin aceptación.
+Responsabilidad propuesta, por confirmar internamente: Diego coordina protocolo y calidad; Julio, datos y
+evaluación; Iván, modelos y mediciones; Alfredo, servicios, interfaz y evidencias. No representa asignación oficial
+previa. La Victus es servidor principal; las otras tres computadoras apoyan anotación, revisión y presentación.
+Criterio oficial Tope Estimacióncrítica Brecha restante
+Defectos e imágenes 25 22 Definiciones de huellas/enconchados y cobertura macro deben validarse;cuotas son propuesta.
+Interfaz 20 18 Imagen por evento corregida y probada localmente. Faltan capturas delogin/historial y despliegue actualizado.
+Modelos 20 18 Tres alternativas y elección sustentadas; latencia local pendiente,conforme al alcance bibliográfico.
+Arquitectura 15 13 Cámara y flujo definidos; lente, tiempo de ciclo y tamaño mínimodependen de la empresa.
+Docker y túnel 15 11 HTTP y JSON externos archivados; faltan capturas Docker/Cloudflare.
+Calidad de entrega 5 4 Credencial verificada y fuentes; equipo y URL siguen provisionales.
+Total 100 86 Estimación propia conservadora; no calificación del docente.
+La rúbrica tiene cinco áreas sustantivas que suman 95 puntos y 5 de calidad. Las penalizaciones son juicio del
+equipo, no subpuntajes oficiales. La imagen por evento queda corregida en desarrollo local; no corresponde
+reclamar 100/100 sin desplegar la actualización y completar las capturas técnicas pendientes.
+
+PÁGINA 10
+PIMIENTERO G2 · INGENIERÍA DE LA IA · ENDEREZADO PC08
+Checkpoint 01 | Equipo 01 provisional 10
+Referencias
+Fuentes primarias consultadas el 9 de noviembre de 2026. Las fichas ISO sustentan el alcance de cada norma; no
+acreditan su adopción por IMACASA. Las propuestas y cálculos de muestreo, óptica y recursos son elaboración
+propia.
+[1] KEY Institute. CheckPoint infra Reto IMACASA, documento oficial y rúbrica proporcionados en el curso. Archivo local
+CheckPoint_infra_Reto_IMACASA.pdf.
+https://keyinstitute.instructure.com/courses/310/files/51600
+[2] K. Roth et al.. Towards Total Recall in Industrial Anomaly Detection, CVPR, 2022. Tabla 5 y protocolo de inferencia.
+https://openaccess.thecvf.com/content/CVPR2022/html/Roth_Towards_Total_Recall_in_Industrial_Anomaly_Detection_CVPR_2022_pape
+r.html
+[3] T. Defard et al.. PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization, arXiv:2011.08785, 2020.
+Tabla VII.
+https://arxiv.org/abs/2011.08785
+[4] Ultralytics. Ultralytics YOLO11, documentación oficial; tabla Detection COCO.
+https://docs.ultralytics.com/models/yolo11/
+[5] PyTorch torchvision. wide_resnet50_2, documentación del modelo y número de parámetros.
+https://docs.pytorch.org/vision/main/models/generated/torchvision.models.wide_resnet50_2.html
+[6] PyTorch torchvision. resnet18, documentación del modelo y número de parámetros.
+https://docs.pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html
+[7] Basler. acA2440-35uc, especificaciones oficiales del fabricante.
+https://docs.baslerweb.com/aca2440-35uc
+[8] Edmund Optics. Common Illumination Types, nota técnica de iluminación para visión.
+https://www.edmundoptics.com/knowledge-center/application-notes/illumination/choose-the-correct-illumination/
+[9] ISO. ISO 8785:1998, Geometrical Product Specifications — Surface imperfections — Terms, definitions and parameters. Ficha de
+catálogo.
+https://www.iso.org/standard/16210.html
+[10] ISO. ISO 1101:2017, Geometrical product specifications — Geometrical tolerancing. Ficha de catálogo.
+https://www.iso.org/standard/66777.html
+[11] ISO. ISO 21920-2:2021, Surface texture: Profile — Terms, definitions and surface texture parameters. Ficha de catálogo.
+https://www.iso.org/standard/72226.html
+[12] ISO. ISO 14253-1:2017, Inspection by measurement of workpieces and measuring equipment — Decision rules for verifying conformity
+or nonconformity with specifications.
+https://www.iso.org/standard/70137.html
+[13] ISO. ISO 6508-1:2023, Metallic materials — Rockwell hardness test — Test method. Ficha de catálogo.
+https://www.iso.org/standard/84343.html
+[14] Cloudflare. Quick Tunnels, documentación oficial de túneles temporales.
+https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/

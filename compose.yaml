@@ -1,0 +1,38 @@
+services:
+  api:
+    build: .
+    environment:
+      API_TOKEN: ${API_TOKEN:?Ejecuta primero preparar.ps1}
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  ui:
+    build: .
+    command: ["uvicorn", "app.ui:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      UI_USER: ${UI_USER:-pimientero}
+      UI_PASSWORD: ${UI_PASSWORD:-}
+      API_URL: http://api:8000
+      DB_PATH: /data/events.sqlite3
+    volumes:
+      - historial:/data
+    ports:
+      - "127.0.0.1:8080:8000"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    command: ["tunnel", "--no-autoupdate", "--url", "http://ui:8000"]
+    profiles: ["publico"]
+    depends_on:
+      - ui
+    restart: "no"
+volumes:
+  historial:
