@@ -48,3 +48,10 @@ El arreglo de la franja no cambia permisos: limpia estado de errores entre sesio
 ## Actualización posvisita 11 de noviembre de 2026
 
 Informe nuevo sin sobrescribir originales; datos de visita y enfoque híbrido; cálculos y diagramas nuevos; cambio mínimo de texto en index.html; pruebas repetidas y evidencia HTTPS nueva. No se modifican API, usuarios, permisos o eventos. Publicación autorizada de los entregables sanitizados y capturas del demo; se excluyen originales privados, .env y fotos industriales.
+
+
+## Integración del cambio remoto de interfaz
+
+Durante el cierre se detectó `fea1f90`, publicado en la rama por otro trabajo. Se integró sin descartar mejoras de login, indicadores, historial o visor. El único conflicto fue index.html: se conservó la estructura remota y se incorporó el contexto de visita. No se cambiaron backend, contraseñas, permisos o catálogo. Se repitieron los cuatro roles, regresión de sesión, exportación, gráficos, visor e imágenes; todos pasaron sin modificar pruebas. También pasaron 9 pruebas Python sobre la integración; se reconstruyó Docker y se comprobó nuevamente reinicio con 38 eventos y filtro [32,27,26,2]. La comprobación HTTPS posterior NO pudo completarse: primero falló DNS y en el último intento Docker Engine no estaba disponible. cloudflare-integracion.json registra esta limitación; el éxito 200/401/200 de las 15:35 permanece como evidencia histórica. La ejecución de 9 pruebas en imagen Docker corresponde al paquete previo a esta integración solo de frontend.
+
+Las capturas del PDF conservan fecha y carácter histórico; el texto académico sigue vigente. Login y contexto se recapturaron con la interfaz integrada. No se atribuyen las mejoras remotas a la modificación mínima posvisita.

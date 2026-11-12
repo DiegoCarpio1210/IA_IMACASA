@@ -50,5 +50,10 @@
     "prueba en Victus",
     "prueba física desde móvil en esta revisión",
     "disponibilidad futura del túnel"
-  ]
+  ],
+  "integrated_remote_commit": "fea1f909f540be575c2b5589f46854aba9692c27",
+  "integration_checks": "PASS: cuatro roles, sesión, gráficos, filtros/exportación, visor/imágenes, pytest 9, Docker rebuild/restart, 38 eventos",
+  "pytest_docker_scope": "imagen posvisita anterior a integración remota exclusivamente frontend",
+  "https_post_merge": "cloudflare-integracion.json",
+  "latest_recheck": "Docker Engine no disponible; no se repitió el cotejo de archivos del contenedor ni HTTPS. Se conservan resultados históricos."
 }

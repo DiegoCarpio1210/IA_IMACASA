@@ -36,4 +36,4 @@ El prompt maestro autoriza publicar los entregables sanitizados. Se inspeccionar
 | informe/CP1_PC08_final_sanitizado.pdf | 69a4833cd6f7c012e599cf2cc8818f4ae605ae53eeb06525b34778d3ecf92db3 |
 | evidencias/api-posvisita.png | a8c6829d2f6515807f52313de4e0622ad0c62ceadbb51fe74e881cc83e55e521 |
 | evidencias/contexto-posvisita.png | ecca7116f8cd18bd40eafca677162b1580fb9117d6ed83f945c358d15f812db7 |
-| evidencias/login-posvisita.png | 4f80db34fd363a11141059b1cd92254a61127f59f158a5c741b40155d2656c08 |
+| evidencias/login-posvisita.png | 975ec79f9793f48dca6c0fbac0cad5d507e687a036b059177cb1ffff1bd84994 |

@@ -21,3 +21,6 @@ Las 12 capturas fueron autorizadas para publicación tras revisión. Son evidenc
 - `calculos-posvisita.json`: resultados de fórmulas de diseño; no son observaciones de planta.
 
 Las figuras 4–5 son recortes de capturas históricas autorizadas; no cambian valores ni identificadores. La verificación actual de filtros y persistencia está registrada por separado. Los gráficos de los cuatro roles se volvieron a comprobar en una base aislada; no se atribuyen sus contadores al historial operativo.
+
+
+Se integró el commit remoto fea1f90 durante el cierre. Login y contexto se recapturaron; api-posvisita.png y cloudflare-posvisita.json conservan el registro de las 15:35 usado en el PDF. cloudflare-integracion.json registra la revalidación externa no completada (DNS y, después, Docker Engine no disponible); no acredita otro éxito HTTPS.
