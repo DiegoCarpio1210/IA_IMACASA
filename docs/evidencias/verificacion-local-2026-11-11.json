@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-11-11T22:11:35-06:00",
+  "transport": "HTTP local (sin Docker)",
+  "temporary": false,
+  "environment": "Windows PowerShell, Python 3.11.9, entorno .venv local",
+  "checks": [
+    {
+      "path": "/health",
+      "authentication": "ninguna",
+      "status": 200,
+      "expected": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "sin credenciales",
+      "status": 401,
+      "expected": 401,
+      "body": {
+        "detail": "Credenciales ausentes o incorrectas"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "token incorrecto",
+      "status": 401,
+      "expected": 401,
+      "body": {
+        "detail": "Credenciales ausentes o incorrectas"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "Bearer válido, valor omitido",
+      "status": 200,
+      "expected": 200,
+      "body": {
+        "equipo": "Pimientero G2 — Equipo 01 (provisional)",
+        "estacion": "PC08",
+        "version": "1.0.0",
+        "timestamp": "2026-11-12T04:11:35.424741+00:00"
+      }
+    }
+  ],
+  "python_tests": {
+    "command": "python -m pytest tests -q -p no:cacheprovider",
+    "passed": 9,
+    "failed": 0,
+    "warning": "Deprecación AnyIO/Starlette en TestClient; no afecta el resultado"
+  },
+  "result": "PASS",
+  "limits": "No sustituye la validación con Docker ni la prueba HTTPS mediante túnel; ambas deben repetirse en el equipo de presentación."
+}
