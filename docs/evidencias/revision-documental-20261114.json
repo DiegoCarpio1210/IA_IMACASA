@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14",
+  "body_pages_including_cover": 10,
+  "reference_pages": 1,
+  "private_pages": 11,
+  "same_body_private_sanitized": true,
+  "github_link_clickable": true,
+  "reference_links": 16,
+  "reference_style": "PBL_3_reporte.pdf de Descargas confirmado por usuario; TNR 12, títulos 14/12, carta, marco, tablas 11",
+  "render_method": "render_docx.py no encontró LibreOffice; exportación Word y rasterización PDFium",
+  "visual_review": "11 páginas revisadas; sin recortes ni tablas partidas",
+  "sha256": {
+    "docs\\informe\\CP1_PC08_definitivo_20261114_sanitizado.pdf": "173a3fd7d2540b47e7a1deed5364c1b7d98954509709e8bfbcba3308009c9d91",
+    "docs\\informe\\CP1_PC08_definitivo_20261114_sanitizado.docx": "8fefbd35cb7679e0f746020bc4e10ea604c31e02ae06523f9c9ce383e0446c2e"
+  }
+}

@@ -1,3 +1,5 @@
+> Aporte de Alfredo conservado. Véanse [aclaraciones de auditoría](AUDITORIA_CIERRE_20261114.md): API_TOKEN solo se pasa a API; verificar.py y test_app.py tienen cobertura distinta; 40 caracteres corresponde al generador, no al contrato. Los resultados propios del 11/11 son históricos; pruebas actuales en evidencias/pruebas-20261114.json.
+
 # Anexo técnico · Backend, API y despliegue
 
 **Proyecto:** IMACASA · Módulo PC08 Enderezado · Pimientero G2 (Equipo 01, provisional)

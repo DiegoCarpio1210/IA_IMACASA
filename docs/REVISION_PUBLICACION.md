@@ -37,3 +37,8 @@ El prompt maestro autoriza publicar los entregables sanitizados. Se inspeccionar
 | evidencias/api-posvisita.png | a8c6829d2f6515807f52313de4e0622ad0c62ceadbb51fe74e881cc83e55e521 |
 | evidencias/contexto-posvisita.png | ecca7116f8cd18bd40eafca677162b1580fb9117d6ed83f945c358d15f812db7 |
 | evidencias/login-posvisita.png | 975ec79f9793f48dca6c0fbac0cad5d507e687a036b059177cb1ffff1bd84994 |
+
+
+## Cierre 14/11/2026
+
+El usuario autoriza publicar DOCX/PDF sanitizados y evidencias del demo en el repositorio privado, e integrar PR #1 en main mediante merge normal si la revisión es segura. Nuevos documentos y capturas sin credenciales; copia privada fuera del repositorio. Hashes documentales en evidencias/revision-documental-20261114.json. Auditoría previa del paquete: 128 archivos sin hallazgos. Se verifican índice Git e historia antes de publicar.

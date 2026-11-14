@@ -1,5 +1,5 @@
-# Informe académico vigente
+# Informe definitivo del Checkpoint 01
 
-CP1_PC08_final_sanitizado.docx y .pdf son la actualización posvisita del 11/11/2026. El .md conserva el texto editable. Los documentos preliminares se retienen solo como historial; sus hipótesis pre-visita no prevalecen sobre la nueva propuesta.
+Versión vigente corregida del 14/11/2026: [PDF](CP1_PC08_definitivo_20261114_sanitizado.pdf), [DOCX](CP1_PC08_definitivo_20261114_sanitizado.docx), [texto editable](CP1_PC08_definitivo_20261114_sanitizado.md).
 
-La versión sanitizada no contiene tokens ni fotos industriales. La versión privada está fuera del repositorio, en outputs/entrega-privada-PC08, con campos delimitados para datos de evaluación. Completar siguiendo PRESENTACION_PC08.md y revisar el PDF nuevamente. El número de equipo sigue pendiente.
+Las versiones preliminar y final_sanitizado del 11/11 se conservan sin modificaciones como documentos históricos; sus estimaciones 900/7440 y banco de dos cámaras no son la propuesta vigente. La copia privada del docente se guarda localmente fuera del repositorio. Los PDF públicos del repositorio privado están sanitizados.

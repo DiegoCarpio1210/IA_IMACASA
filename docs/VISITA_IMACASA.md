@@ -1,3 +1,5 @@
+> Actualización 14/11/2026: [alcance vigente](ALCANCE_VIGENTE.md) y [auditoría actual](AUDITORIA_CIERRE_20261114.md) sustituyen las hipótesis industriales y el estado de entrega siguientes. El contenido inferior se conserva como registro histórico del 11/11; no usar 8–10 h como jornada confirmada, 900/7440 como dataset vigente ni banco fijo como arquitectura principal.
+
 # Registro posvisita y límites de la evidencia
 
 Actualizado el 11 de noviembre de 2026. Fuente: notas de la visita comunicadas por el equipo en esta actualización. La fecha exacta de la visita, acta y validación escrita están pendientes; no se presentan como mediciones propias.
