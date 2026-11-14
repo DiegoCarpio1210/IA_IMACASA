@@ -1,0 +1,158 @@
+{
+  "naturaleza": "PROPUESTA; no dataset recolectado; grupos disjuntos para presupuestar",
+  "produccion": [
+    {
+      "piezas_dia": 15000,
+      "horas_efectivas": 8,
+      "piezas_h": 1875.0,
+      "piezas_min": 31.25,
+      "segundos_pieza": 1.92
+    },
+    {
+      "piezas_dia": 15000,
+      "horas_efectivas": 10,
+      "piezas_h": 1500.0,
+      "piezas_min": 25.0,
+      "segundos_pieza": 2.4
+    },
+    {
+      "piezas_dia": 20000,
+      "horas_efectivas": 8,
+      "piezas_h": 2500.0,
+      "piezas_min": 41.666666666666664,
+      "segundos_pieza": 1.44
+    },
+    {
+      "piezas_dia": 20000,
+      "horas_efectivas": 10,
+      "piezas_h": 2000.0,
+      "piezas_min": 33.333333333333336,
+      "segundos_pieza": 1.8
+    }
+  ],
+  "objetivo_piezas_min": 45,
+  "objetivo_segundos_pieza": 1.3333333333333333,
+  "capacidad_8h": 21600,
+  "capacidad_10h": 27000,
+  "margen_sobre_pico_8h": 0.08000000000000007,
+  "disponibilidad_minima_pico_8h": 0.9259259259259259,
+  "objetivo_con_disponibilidad_90": 46.2962962962963,
+  "incidencias_comunicadas": 750.0,
+  "incidencias_alta_solo_si_prevalencia_constante": 1000.0,
+  "clases": [
+    {
+      "categoria": "Aceptadas",
+      "piezas": 400,
+      "fotos_base": 3200,
+      "particion_piezas": [
+        280,
+        60,
+        60
+      ]
+    },
+    {
+      "categoria": "Golpes",
+      "piezas": 100,
+      "fotos_base": 800,
+      "particion_piezas": [
+        70,
+        15,
+        15
+      ]
+    },
+    {
+      "categoria": "Enconchados",
+      "piezas": 100,
+      "fotos_base": 800,
+      "particion_piezas": [
+        70,
+        15,
+        15
+      ]
+    },
+    {
+      "categoria": "Ondulado del lomo",
+      "piezas": 100,
+      "fotos_base": 800,
+      "particion_piezas": [
+        70,
+        15,
+        15
+      ]
+    },
+    {
+      "categoria": "Huellas",
+      "piezas": 40,
+      "fotos_base": 320,
+      "particion_piezas": [
+        28,
+        6,
+        6
+      ]
+    },
+    {
+      "categoria": "Poros",
+      "piezas": 40,
+      "fotos_base": 320,
+      "particion_piezas": [
+        28,
+        6,
+        6
+      ]
+    },
+    {
+      "categoria": "Torcido",
+      "piezas": 40,
+      "fotos_base": 320,
+      "particion_piezas": [
+        28,
+        6,
+        6
+      ]
+    },
+    {
+      "categoria": "Mal pulido",
+      "piezas": 40,
+      "fotos_base": 320,
+      "particion_piezas": [
+        28,
+        6,
+        6
+      ]
+    },
+    {
+      "categoria": "Hoja ampollada/quemada",
+      "piezas": 40,
+      "fotos_base": 320,
+      "particion_piezas": [
+        28,
+        6,
+        6
+      ]
+    }
+  ],
+  "particion_piezas": [
+    630,
+    135,
+    135
+  ],
+  "particion_fotos": [
+    5208,
+    1116,
+    1116
+  ],
+  "fotos_normales": 3280,
+  "fotos_piezas_defectuosas": 4160,
+  "fotos_nominales_train": 2296,
+  "max_presentaciones_train": 15624,
+  "cota_omision_95_cero_fallos": {
+    "6": 0.39303776899708276,
+    "15": 0.18103627252208465,
+    "59": 0.049507609888227
+  },
+  "test_independiente_para_cota_5": 59,
+  "ejemplo_optico_mm_pixel": 0.24509803921568626,
+  "ejemplo_exposicion_s": 0.00040849673202614375,
+  "ejemplo_rgb_bytes_imagen": 15040512,
+  "ejemplo_rgb_bytes_8h": 2599000473600
+}

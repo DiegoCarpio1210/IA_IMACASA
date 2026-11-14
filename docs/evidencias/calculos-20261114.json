@@ -1,0 +1,68 @@
+{
+  "nature": "propuesta no adquirida",
+  "scenarios": [
+    {
+      "diarias": 15000,
+      "horas_hipoteticas": 8,
+      "piezas_min": 31.25
+    },
+    {
+      "diarias": 15000,
+      "horas_hipoteticas": 10,
+      "piezas_min": 25.0
+    },
+    {
+      "diarias": 15000,
+      "horas_hipoteticas": 12,
+      "piezas_min": 20.833333333333332
+    },
+    {
+      "diarias": 15000,
+      "horas_hipoteticas": 24,
+      "piezas_min": 10.416666666666666
+    },
+    {
+      "diarias": 20000,
+      "horas_hipoteticas": 8,
+      "piezas_min": 41.666666666666664
+    },
+    {
+      "diarias": 20000,
+      "horas_hipoteticas": 10,
+      "piezas_min": 33.333333333333336
+    },
+    {
+      "diarias": 20000,
+      "horas_hipoteticas": 12,
+      "piezas_min": 27.77777777777778
+    },
+    {
+      "diarias": 20000,
+      "horas_hipoteticas": 24,
+      "piezas_min": 13.88888888888889
+    }
+  ],
+  "pieces_total_train_val_test": [
+    600,
+    420,
+    90,
+    90
+  ],
+  "images_total_train_val_test": [
+    3600,
+    2520,
+    540,
+    540
+  ],
+  "patchcore_normal_train_top_images": 840,
+  "train_presentations_max": 7560,
+  "zero_misses_15_upper95": 0.18103627252208465,
+  "nominal_target_unconfirmed": 45,
+  "required_availability_20000_8h": 0.9259259259259259,
+  "required_rate_at90pct": 46.2962962962963,
+  "rgb_bytes_per_frame": 15040512,
+  "stream_MBps_at45": 67.682304,
+  "storage_TB_8h": 1.9492503552,
+  "mm_per_pixel_example": 0.24509803921568626,
+  "exposure_ms_one_pixel_example": 0.4084967320261437
+}

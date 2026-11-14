@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-11-11T20:24:52.874179",
+  "result": "NOT_VERIFIED",
+  "previous_attempt": "DNS getaddrinfo failed",
+  "latest_attempt": "Docker Engine no disponible: pipe dockerDesktopLinuxEngine ausente",
+  "historical_success": "cloudflare-posvisita.json",
+  "note": "No equivale a una respuesta HTTP fallida. No se pudo repetir la comprobación externa tras integrar."
+}

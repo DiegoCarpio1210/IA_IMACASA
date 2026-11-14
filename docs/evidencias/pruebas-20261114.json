@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-11-14T11:58:24.176496-06:00",
+  "base_commit": "fb308f126c3a4cba581acdbf81a0c26493e8115e",
+  "pytest_local": {
+    "passed": 9,
+    "warning": "AnyIO/Starlette deprecation"
+  },
+  "pytest_docker": {
+    "passed": 9,
+    "warning": "AnyIO/Starlette deprecation"
+  },
+  "node_images": {
+    "passed": 2
+  },
+  "browser": {
+    "roles": [
+      "herrero",
+      "pulidor",
+      "supervisor",
+      "admin"
+    ],
+    "dashboard": "PASS",
+    "session_401_403_navigation": "PASS",
+    "configured_read_only": "PASS",
+    "viewer": "PASS",
+    "javascript_errors": 0,
+    "fixture": "aislado, 18 eventos iniciales y 2 generados por visor",
+    "initial_viewer_attempt": "No ejecutó login: faltaba TEST_UI_PASSWORD; se configuró desde fixture privado y se repitió con PASS"
+  },
+  "docker": {
+    "engine": "29.9.3",
+    "build": "PASS",
+    "api": "healthy",
+    "ui": "running",
+    "files_match": "PASS",
+    "restart": "PASS",
+    "events_preserved": 38,
+    "all_event_fields_preserved": true,
+    "session_after_restart": 200,
+    "filter_ids": [
+      32,
+      27,
+      26,
+      2
+    ]
+  },
+  "https": "cloudflare-20261114.json",
+  "external_phone_current": "PENDIENTE DE VERIFICACION",
+  "model_benchmark": "NO EJECUTADO",
+  "operational_credentials": "sin modificaciones"
+}

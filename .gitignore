@@ -1,0 +1,57 @@
+.env
+*.sqlite3
+__pycache__/
+.venv/
+*.sqlite
+*.db
+*.sqlite3-*
+*.sqlite-*
+*.db-*
+*-wal
+*-shm
+.env.*
+!.env.example
+backups/
+datos-locales/
+.pytest_cache/
+*.log
+*.tmp
+*.zip
+private/
+work/
+
+node_modules/
+browser-accounts.json
+
+# Excluir material no revisado; excepciones autorizadas explícitas
+docs/evidencias/*.png
+docs/informe/*.pdf
+docs/informe/*.docx
+
+# Paquete revisado autorizado en la instrucción final
+!docs/evidencias/administracion.png
+!docs/evidencias/docker-filtro-legado.png
+!docs/evidencias/docker-ui-pc08.png
+!docs/evidencias/herrero-dashboard.png
+!docs/evidencias/herrero-historial.png
+!docs/evidencias/inspeccion-antes.png
+!docs/evidencias/inspeccion-despues.png
+!docs/evidencias/operativo-movil.png
+!docs/evidencias/pulidor-dashboard.png
+!docs/evidencias/pulidor-historial.png
+!docs/evidencias/supervisor-dashboard.png
+!docs/evidencias/supervisor-historial.png
+!docs/informe/CP1_PC08_preliminar_sin_credenciales.docx
+!docs/informe/CP1_PC08_preliminar_sin_credenciales.pdf
+
+# Entregables posvisita autorizados y sanitizados
+!docs/informe/CP1_PC08_final_sanitizado.docx
+!docs/informe/CP1_PC08_final_sanitizado.pdf
+!docs/evidencias/contexto-posvisita.png
+!docs/evidencias/api-posvisita.png
+!docs/evidencias/login-posvisita.png
+
+# Cierre académico 14/11 revisado
+!docs/informe/CP1_PC08_definitivo_20261114_sanitizado.docx
+!docs/informe/CP1_PC08_definitivo_20261114_sanitizado.pdf
+!docs/evidencias/*-20261114.png

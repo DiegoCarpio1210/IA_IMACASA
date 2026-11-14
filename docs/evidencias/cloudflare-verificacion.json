@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-11-11T02:10:38.605464+00:00",
+  "transport": "HTTPS Cloudflare Quick Tunnel",
+  "temporary": true,
+  "checks": [
+    {
+      "path": "/",
+      "authentication": "ninguna",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/health",
+      "authentication": "ninguna",
+      "status": 200,
+      "expected": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "ninguna",
+      "status": 401,
+      "expected": 401,
+      "body": {
+        "detail": "Credenciales ausentes o incorrectas"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "Bearer local, valor omitido",
+      "status": 200,
+      "expected": 200,
+      "body": {
+        "equipo": "Pimientero G2 â€” Equipo 01 (provisional)",
+        "estacion": "PC08",
+        "version": "1.0.0",
+        "timestamp": "2026-11-11T02:10:40.858706+00:00"
+      }
+    },
+    {
+      "path": "/ui/events",
+      "authentication": "ninguna",
+      "status": 401,
+      "expected": 401
+    },
+    {
+      "path": "/ui/admin/users",
+      "authentication": "ninguna",
+      "status": 401,
+      "expected": 401
+    }
+  ],
+  "result": "PASS",
+  "ui_session": {
+    "login": 200,
+    "session_authenticated": 200,
+    "events_authenticated": 200,
+    "cookie_flags": [
+      "HttpOnly",
+      "Secure",
+      "SameSite=Strict"
+    ],
+    "logout": 200,
+    "session_after_logout": 401
+  }
+}

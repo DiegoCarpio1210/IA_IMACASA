@@ -1,0 +1,1 @@
+{"environment":"Lenovo P52s / Docker local","date":"2026-11-10","result":"PASS","events_preserved":38,"ids_and_event_fields_survive_restart":true,"session_after_docker_restart":200,"password_hashes":"Argon2id","health":200,"info_anonymous":401,"info_authorized":200,"combined_filter_ids":[32,27,26,2],"cloudflare_current_version_rechecked":false}
