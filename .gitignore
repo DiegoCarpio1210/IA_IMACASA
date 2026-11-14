@@ -50,3 +50,8 @@ docs/informe/*.docx
 !docs/evidencias/contexto-posvisita.png
 !docs/evidencias/api-posvisita.png
 !docs/evidencias/login-posvisita.png
+
+# Cierre académico 14/11 revisado
+!docs/informe/CP1_PC08_definitivo_20261114_sanitizado.docx
+!docs/informe/CP1_PC08_definitivo_20261114_sanitizado.pdf
+!docs/evidencias/*-20261114.png

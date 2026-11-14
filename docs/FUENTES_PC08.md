@@ -1,3 +1,5 @@
+> Revalidado el 14/11/2026. La cámara se aplica ahora a tres vistas de banda propuesta; véase ALCANCE_VIGENTE.md. Se conservan condiciones bibliográficas de los modelos.
+
 # Registro de fuentes primarias
 
 Consulta: 11 de noviembre de 2026. Enlaces abiertos y contrastados; no se inventaron DOI ni se trasladaron resultados a IMACASA.
@@ -53,3 +55,10 @@ https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-
 - Cloudflare: Quick Tunnel temporal para pruebas, sin continuidad garantizada. La evidencia operativa está separada de la documentación del proveedor.
 
 La rúbrica [1] se leyó completa desde el PDF local del curso (2 páginas, fecha interna 05/11/2026); no se afirmó acceso público al enlace Canvas autenticado. Las notas industriales se registran en VISITA_IMACASA.md como comunicación del equipo. No hay una norma internacional documentada para el criterio verbal de 2 mm.
+
+
+[11] KEYENCE, Machine Vision Lighting Selection Guide. https://www.keyence.com/products/vision/resources/vision-resources/basics-of-lighting-selection.jsp
+
+[12] M. Aghaei et al., Complex-Object Visual Inspection via Multiple Lighting Configurations, arXiv:2004.09374, 2020. https://arxiv.org/abs/2004.09374
+
+La nota Edmund diferencia contraluz para silueta y luz difusa; su apartado darkfield transmitido no es el campo oscuro reflejado propuesto para metal. Este último se fundamenta en KEYENCE y la investigación multiluces. No se extrapolan resultados a IMACASA.

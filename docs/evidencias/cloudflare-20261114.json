@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-14T11:57:24.784737-06:00",
+  "transport": "HTTPS Cloudflare Quick Tunnel",
+  "temporary": true,
+  "checks": [
+    {
+      "path": "/health",
+      "authentication": "Sin credenciales",
+      "status": 200,
+      "body": {
+        "status": "ok"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "Sin credenciales",
+      "status": 401,
+      "body": {
+        "detail": "Credenciales ausentes o incorrectas"
+      }
+    },
+    {
+      "path": "/info",
+      "authentication": "Bearer verificado, omitido",
+      "status": 200,
+      "body": {
+        "equipo": "Pimientero G2 — Equipo 01 (provisional)",
+        "estacion": "PC08",
+        "version": "1.0.0",
+        "timestamp": "2026-11-14T17:57:26.321911+00:00"
+      }
+    }
+  ]
+}
